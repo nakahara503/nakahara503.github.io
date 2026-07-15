@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cloud Cert Lab — 中原航大 (Kodai Nakahara)</title>
+  <meta name="description" content="Cloud Cert Lab（運営者：中原航大 / Kodai Nakahara）— クラウド認定資格（Google Cloud / AWS / Azure）向けの練習問題集を制作・提供しています。">
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f5f7fa;
+      --border: #e2e8f0;
+      --text: #1a202c;
+      --muted: #4a5568;
+      --accent: #1a73e8;
+      --accent-2: #0b57d0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1420;
+        --surface: #1a2233;
+        --border: #2a3550;
+        --text: #e6ecf5;
+        --muted: #9fb0c9;
+        --accent: #4f9bff;
+        --accent-2: #82b4ff;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Segoe UI", Meiryo, sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+    header.hero {
+      background: linear-gradient(160deg, var(--surface), var(--bg));
+      border-bottom: 1px solid var(--border);
+      padding: 56px 0 40px;
+      text-align: center;
+    }
+    .hero img.logo {
+      width: 104px; height: 104px;
+      border-radius: 24px;
+      box-shadow: 0 6px 24px rgba(26,115,232,.18);
+      background: #fff;
+    }
+    .hero h1 {
+      margin: 20px 0 6px;
+      font-size: 1.9rem;
+      letter-spacing: .01em;
+    }
+    .hero .tagline { color: var(--muted); font-size: 1.02rem; margin: 0; }
+    .hero .owner { margin-top: 14px; font-size: 1.05rem; }
+    .hero .owner strong { font-weight: 700; }
+
+    main { padding: 40px 0 24px; }
+    section { margin-bottom: 40px; }
+    h2 {
+      font-size: 1.2rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+      margin: 0 0 16px;
+    }
+    p { margin: 0 0 14px; color: var(--text); }
+    .muted { color: var(--muted); }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+    }
+    .contact-list { list-style: none; margin: 0; padding: 0; }
+    .contact-list li {
+      display: flex; align-items: baseline; gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-list li:last-child { border-bottom: 0; }
+    .contact-list .label {
+      flex: 0 0 128px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    .contact-list .value { font-size: 1rem; word-break: break-word; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-2); text-decoration: underline; }
+
+    .badge {
+      display: inline-block;
+      font-size: .78rem;
+      color: var(--accent-2);
+      background: rgba(26,115,232,.12);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 2px 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    ul.plain { margin: 8px 0 0; padding-left: 20px; }
+    ul.plain li { margin: 4px 0; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <img class="logo" src="logo.png" alt="Cloud Cert Lab ロゴ">
+      <h1>Cloud Cert Lab</h1>
+      <p class="tagline">クラウド認定資格のための練習問題集</p>
+      <p class="owner">運営者：<strong>中原航大</strong>（Kodai Nakahara）</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>事業について</h2>
+      <p>
+        <strong>Cloud Cert Lab</strong> は、Google Cloud・AWS・Microsoft Azure などのクラウド認定資格の
+        取得を目指す学習者に向けて、本番形式の<strong>練習問題集（模擬試験）</strong>を制作・提供する
+        個人事業です。運営者の中原航大（Kodai Nakahara）が、公式試験ガイドに沿って出題ドメインを
+        網羅し、全問に正解の根拠と誤答肢の理由を示す解説を付けた教材を作成しています。
+      </p>
+    </section>
+
+    <section>
+      <h2>連絡先</h2>
+      <div class="card">
+        <ul class="contact-list">
+          <li>
+            <span class="label">運営者</span>
+            <span class="value">中原航大 / Kodai Nakahara</span>
+          </li>
+          <li>
+            <span class="label">ブランド名</span>
+            <span class="value">Cloud Cert Lab</span>
+          </li>
+          <li>
+            <span class="label">メール</span>
+            <span class="value"><a href="mailto:k.nakahara.biz@gmail.com">k.nakahara.biz@gmail.com</a></span>
+          </li>
+          <li>
+            <span class="label">Udemy プロフィール</span>
+            <span class="value"><a href="https://www.udemy.com/user/hang-da-zhong-yuan/" target="_blank" rel="noopener">udemy.com/user/hang-da-zhong-yuan</a></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>提供コース<span class="badge">準備中・近日公開予定</span></h2>
+      <p class="muted">
+        現在、以下のコースを Udemy 上で公開準備中です。決済連携の完了後に順次公開します。
+      </p>
+      <div class="card">
+        <p style="margin-bottom:6px;">
+          <strong>Google Cloud 認定 Associate Cloud Engineer（ACE）模擬問題集 300問（全6回）</strong>
+        </p>
+        <p class="muted" style="margin-bottom:0;">
+          本番と同形式の練習テストを複数回（各回50問）用意し、公式試験ガイドの4ドメイン
+          （環境のセットアップ／計画と実装／運用の確保／アクセスとセキュリティ）を出題比率に沿って
+          網羅。全問に詳しい解説付き。
+        </p>
+        <ul class="plain muted">
+          <li>対象：GCP ACE 認定資格の取得を目指す方</li>
+          <li>レベル：中級（Google Cloud の基本操作経験 6か月程度が目安）</li>
+        </ul>
+      </div>
+      <p class="muted" style="margin-top:14px;">
+        今後、AWS・Azure など他のクラウド認定資格向けの練習問題集も順次追加予定です。
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © 2026 Cloud Cert Lab（中原航大 / Kodai Nakahara）
+    </div>
+  </footer>
+</body>
+</html>
