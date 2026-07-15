@@ -59,8 +59,28 @@
     .hero .owner { margin-top: 14px; font-size: 1.05rem; }
     .hero .owner strong { font-weight: 700; }
 
-    main { padding: 40px 0 24px; }
-    section { margin-bottom: 40px; }
+    main { padding: 64px 0 24px; }
+    section { margin-bottom: 44px; }
+    section:first-child { margin-top: 8px; }
+
+    .about-row {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .about-row .portrait {
+      flex: 0 0 132px;
+      width: 132px; height: 132px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--border);
+      box-shadow: 0 4px 18px rgba(0,0,0,.14);
+    }
+    .about-row p { margin-top: 0; }
+    @media (max-width: 520px) {
+      .about-row { flex-direction: column; align-items: center; }
+      .about-row .portrait { margin-bottom: 4px; }
+    }
     h2 {
       font-size: 1.2rem;
       border-left: 4px solid var(--accent);
@@ -128,12 +148,15 @@
   <main class="wrap">
     <section>
       <h2>事業について</h2>
-      <p>
-        <strong>Cloud Cert Lab</strong> は、Google Cloud・AWS・Microsoft Azure などのクラウド認定資格の
-        取得を目指す学習者に向けて、本番形式の<strong>練習問題集（模擬試験）</strong>を制作・提供する
-        個人事業です。運営者の中原航大（Kodai Nakahara）が、公式試験ガイドに沿って出題ドメインを
-        網羅し、全問に正解の根拠と誤答肢の理由を示す解説を付けた教材を作成しています。
-      </p>
+      <div class="about-row">
+        <img class="portrait" src="photo.png" alt="中原航大 (Kodai Nakahara) のプロフィール写真">
+        <p>
+          <strong>Cloud Cert Lab</strong> は、Google Cloud・AWS・Microsoft Azure などのクラウド認定資格の
+          取得を目指す学習者に向けて、本番形式の<strong>練習問題集（模擬試験）</strong>を制作・提供する
+          個人事業です。運営者の中原航大（Kodai Nakahara）が、公式試験ガイドに沿って出題ドメインを
+          網羅し、全問に正解の根拠と誤答肢の理由を示す解説を付けた教材を作成しています。
+        </p>
+      </div>
     </section>
 
     <section>
